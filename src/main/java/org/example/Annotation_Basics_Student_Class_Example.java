@@ -31,4 +31,21 @@ public class Annotation_Basics_Student_Class_Example {
     @Transient // This will not be stored in the DataBase.
     private String temp;
 
+
+    // Passport example for representing One-to-One Relationship.
+    @OneToOne // represents one object linked to only one other object.
+    @JoinColumn(name = "passport_id", referencedColumnName = "id") // Foreign Key Column to be referenced in other table.
+    // name = <the column in students table>, referencedColumnName = <the primary key of the referenced table>.
+    private Passport passport;
+
+    // Getters and Setters
+
+    public Long getId(){return id;}
+    public void setId(Long id) {this.id= id;}
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public Passport getPassport() { return passport; }
+    public void setPassport(Passport passport) { this.passport = passport; }
+
+
 }
