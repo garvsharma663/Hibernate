@@ -21,4 +21,7 @@ public class Project {
         return employee;
     }
 
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
 }
