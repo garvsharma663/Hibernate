@@ -18,6 +18,10 @@ public class Student {
 
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+
+    // Cascade ---> What should happen to related objects when you save/update the parent.
+    //(Persist ---> saving, Merge ---> Update).
+
     // As Relational DB can't directly store Many-To-Many, they make a separate JOIN table to do so.
     // @JoinTable ---> In this example we're providing a name to the new JoinTable, and also
     // using joinColumns =, inverseJoinColumns=,  we're making Foreign Keys for the owning side and the other side.
